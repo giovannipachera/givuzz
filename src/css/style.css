@@ -1,17 +1,56 @@
 .background {
     background-color: white;
     color: black;
+    font-family: Arial, sans-serif;
+}
+
+.givuzz  {
+    color: darkblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 .image_of_me {
     clip-path: circle();
+    width: 480px;
     display: block;
     margin: auto;
-    width: 25%;
 }
 
-.givuzz  {
-    color: red;
-    font-family: 'Brush Script MT', cursive;
+.presentation_p {
+    text-align: center;
+    display: block;
+    padding-top: 25px;
+    width: 800px;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .image_of_me {
+        clip-path: circle();
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .presentation_p {
+        text-align: center;
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+}
+
+.projects_div {
+    text-align: center;
+}
+
+.university_div {
+    text-align: center;
+}
+
+.others_div {
     text-align: center;
 }
