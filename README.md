@@ -1,2 +1,2 @@
-# givuzz
+# givuzz.com
 Personal website
