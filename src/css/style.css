@@ -1,5 +1,5 @@
 .background {
-    background-color: white;
+    background-color: snow;
     color: black;
     font-family: Arial, sans-serif;
 }
@@ -25,32 +25,70 @@
     margin: auto;
 }
 
-@media screen and (max-width: 600px) {
-    .image_of_me {
-        clip-path: circle();
-        display: block;
-        width: 80%;
-        margin: auto;
-    }
+.div {
+    color: white;
+    width: 550px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.projects_div {
+    background-color: dodgerblue;
+}
+
+.university_div {
+    background-color: darkseagreen;
+}
+
+.others_div {
+    background-color: palevioletred;
+}
+
+.div_title {
+    padding-top: 10px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 22.5px;
+    font-weight: bold;
+}
+
+.contacts_p {
+    text-align: center;
+    display: block;
+    padding-top: 25px;
+    width: 800px;
+    margin: auto;
+}
+
+.social_icon {
 }
 
 @media screen and (max-width: 1000px) {
     .presentation_p {
-        text-align: center;
-        display: block;
         width: 80%;
-        margin: auto;
     }
 }
 
-.projects_div {
-    text-align: center;
+@media screen and (max-width: 600px) {
+    .image_of_me {
+        width: 80%;
+    }
+
+    .presentation_p {
+        width: 155px;
+    }
 }
 
-.university_div {
-    text-align: center;
-}
+@media screen and (max-width: 200px) {
+    .image_of_me {
+        width: 155px;
+    }
 
-.others_div {
-    text-align: center;
+    .presentation_p {
+        width: 145px;
+    }
 }
