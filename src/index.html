@@ -8,34 +8,114 @@
 </head>
 <body class="background">
     <div>
-        <h1 class="givuzz">givuzz.com</h1>
+        <h1 class="givuzz hidden-content">givuzz.com</h1>
 
-        <div>
+        <div class="hidden-content">
             <img src="images/soldato.jpg" class="image_of_me" alt="me">
+
             <p class="presentation_p">
-                Hello, my name is Giovanni Pachera. I'm a computer science student at Polytechnic of Milan and this is my website.
+                Hello, my name is Giovanni Pachera. I'm a Computer Science Engineering student at Polytechnic of Milan and this is my website.
             </p>
         </div>
 
-        <div class="div projects_div">
-            <p class="div_title">
-                Projects I Have Worked On
-            </p>
+        <div class="div projects_div hidden_university hidden_others">
+            <div style="display: flex">
+                <div>
+                    <p class="div_title">
+                        Personal Projects
+                    </p>
+                </div>
+                <div class="div_expand" onclick="expandDivProjects()">
+                    <img src="images/expand.png" style="width: 20px; display: block; margin:auto">
+                    <script>
+                        function expandDivProjects() {
+                            let box = document.querySelector('.projects_div');
+                            let content = document.querySelector('.hidden-content');
+
+                            if (!box.classList.contains('expanded')) {
+                                box.classList.add('expanded');
+                                content.classList.add('hidden');
+                                content.classList.add('hidden_projects');
+                            } else {
+                                box.classList.remove('expanded');
+                                content.classList.remove('hidden');
+                                content.classList.remove('hidden_projects');
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
         </div>
-        <div class="div university_div">
-            <p class="div_title">
-                University Courses
-            </p>
+        <div class="div university_div hidden_projects hidden_others">
+            <div style="display: flex">
+                <div>
+                    <p class="div_title">
+                        University
+                    </p>
+                </div>
+                <div class="div_expand" onclick="expandDivUniversity()">
+                    <img src="images/expand.png" style="width: 20px; display: block; margin:auto">
+                    <script>
+                        function expandDivUniversity() {
+                            let box = document.querySelector('.university_div');
+                            let content = document.querySelector('.hidden-content');
+
+                            if (!box.classList.contains('expanded')) {
+                                box.classList.add('expanded');
+                                content.classList.add('hidden');
+                                content.classList.add('hidden_university');
+                            } else {
+                                box.classList.remove('expanded');
+                                content.classList.remove('hidden');
+                                content.classList.remove('hidden_university');
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
         </div>
-        <div class="div others_div">
-            <p class="div_title">
-                Music And Other Interests
-            </p>
+        <div class="div others_div hidden_projects hidden_university">
+            <div style="display: flex">
+                <div>
+                    <p class="div_title">
+                        Other Interests
+                    </p>
+                </div>
+                <div class="div_expand" onclick="expandDivOthers()">
+                    <img src="images/expand.png" style="width: 20px; display: block; margin:auto">
+                    <script>
+                        function expandDivOthers() {
+                            let box = document.querySelector('.others_div');
+                            let content = document.querySelector('.hidden-content');
+
+                            if (!box.classList.contains('expanded')) {
+                                box.classList.add('expanded');
+                                content.classList.add('hidden');
+                                content.classList.add('hidden_others');
+                            } else {
+                                box.classList.remove('expanded');
+                                content.classList.remove('hidden');
+                                content.classList.remove('hidden_others');
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
         </div>
 
-        <div class="contacts_p">
+        <div class="contacts_p hidden_projects hidden-content">
             <a href="https://www.linkedin.com/in/giovanni-pachera-26a83020a/">
                 <img src="images/linkedin-48.png" class="social_icon" alt="linkedin_icon">
+                giovannipachera
+            </a>
+
+            <a href="www.github.com/giovanni-pachera">
+                <img src="images/github.png" class="social_icon" style="width: 48px; height: 48px" alt="linkedin_icon">
+                giovannipachera
+            </a>
+
+            <a href="www.telegram.com/giovanni-pachera">
+                <img src="images/telegram-48.png" class="social_icon" alt="linkedin_icon">
                 giovannipachera
             </a>
         </div>

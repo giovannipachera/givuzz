@@ -28,12 +28,11 @@
 .div {
     color: white;
     width: 550px;
-    height: 300px;
+    height: 250px;
     display: block;
     margin: auto;
-    margin-top: 25px;
     border-radius: 10px;
-    padding-left: 10px;
+    margin-top: 15px;
 }
 
 .projects_div {
@@ -49,11 +48,63 @@
 }
 
 .div_title {
-    padding-top: 10px;
+    padding-right: 50px;
+    width: 170px;
     text-align: left;
     font-family: Arial, sans-serif;
-    font-size: 22.5px;
+    font-size: 20px;
     font-weight: bold;
+    margin-left: 10px;
+}
+
+.div_expand {
+    clip-path: circle();
+    width: 30px;
+    opacity: 75%;
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.expanded {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    margin-top: 0px;
+    border-radius: 0px;
+}
+
+.hidden-content {
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hidden_projects {
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden_university {
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden_others {
+    display: block;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .contacts_p {
@@ -71,6 +122,10 @@
     .presentation_p {
         width: 80%;
     }
+
+    .contacts_p {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -79,7 +134,25 @@
     }
 
     .presentation_p {
-        width: 155px;
+        width: 95%;
+    }
+
+    .div {
+        width: 95%;
+    }
+
+    .contacts_p {
+        width: 95%;
+    }
+
+    .div_expand {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .div_title {
+        width: 50px;
     }
 }
 
@@ -89,6 +162,18 @@
     }
 
     .presentation_p {
-        width: 145px;
+        width: 155px;
+    }
+
+    .div {
+        width: 155px;
+    }
+
+    .contacts_p {
+        width: 155px;
+    }
+
+    .div_expand {
+        width: 30px;
     }
 }
